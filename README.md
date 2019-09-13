@@ -1,0 +1,2 @@
+# E-Healthcare-Advisor
+The main objective is to implement a computer based healthcare information system. This system will help the users to identify certain diseases by answering certain questions asked by the system. Based on the diagnose received the user will be getting some suggestion of medicines that are available at the local chemist without prescription with an advice to visit the doctor.
