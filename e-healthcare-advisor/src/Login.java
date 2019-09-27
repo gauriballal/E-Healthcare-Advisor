@@ -72,9 +72,33 @@ public class Login {
 		           }
 		          else
 		        	  System.out.println("Wrong Credentials...Enter correct username or password");
-		    	
 		          
-		    }
+		          System.out.println("\n 1.View patient's information 2.delete patient's record");
+				    Scanner scan1 = new Scanner(System.in);
+				    int choice1=scan1.nextInt(); 
+				    switch(choice1)
+				    {
+				    case 1:
+				    	System.out.println("Patient's information is as follows:");
+				    	Statement smt=con.createStatement();
+				
+				    	String q="Select * from patient_information";
+					
+				    	ResultSet rs2=smt.executeQuery(q);
+		
+				    	if(rs2.next())
+				    	{ 
+				    		do{
+				    			System.out.println(rs2.getString(1)+","+rs2.getString(2)+","+rs2.getString(3)+","+rs2.getString(4)+","+rs2.getString(5));
+				    		}while(rs2.next());
+				    	}
+				    	else{
+						System.out.println("Record Not Found...");
+				    	}
+					break;
+				    }
+		    	
+		}
 		         
 		        
 		    
