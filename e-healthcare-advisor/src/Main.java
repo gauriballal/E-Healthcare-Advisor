@@ -10,7 +10,7 @@ public class Main
 		int Choice = scan.nextInt();
 		switch (Choice) {
 		case 1: 
-			System.out.println("1.Signup 2.Signin");
+			System.out.println("1.Signup 2.Signin 3.Chat with admin");
 			int op = scan.nextInt();
 			switch(op)
 			{
@@ -21,6 +21,10 @@ public class Main
 			case 2:
 				Patient_login p = new Patient_login();
 				p.patient_login();
+				break;
+			case 3:
+				Chat c = new Chat();
+				c.chat();
 				break;
 			default:
 				System.out.println("Invalid");
